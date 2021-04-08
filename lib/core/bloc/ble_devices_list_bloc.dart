@@ -57,7 +57,8 @@ class BleDevicesListBloc extends BaseBloc<BleDevicesListMessage> {
       print("------------------- Permission not granted -----------------");
     }
 
-    Future.delayed(Duration(seconds: 5)).then((value) => subscription.cancel());
+    Future.delayed(Duration(seconds: 10))
+        .then((value) => subscription.cancel());
   }
 
   void _selectBleDevice(BleDevicesListMessage message) {
